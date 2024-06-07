@@ -1,6 +1,10 @@
 <div class="styleguide">
     <div class="container mx-auto">
         <h1>Styleguide</h1>
+        <section class="styleguide__section">
+            <header>
+                <h2>Typography</h2>
+            </header>
             <div class="md:grid grid-cols-2 gap-4">
                 <div>
                     <h2 class="styleguide__title">Font Family</h2>
@@ -10,22 +14,22 @@
                 </div>
                 <div>
                     <h2 class="styleguide__title">Font Weights</h2>
-                    <ul class="styleguide__font-weights">
+                    <ul class="flex gap-4">
                         <li>
-                            <p class="body-font--black">Black</p>
-                            <p class="body-font--black-italic">Black Italic</p>
+                            <p class="font-black mb-4">Black</p>
+                            <p class="font-black italic">Black Italic</p>
                         </li>
                         <li>
-                            <p class="body-font--bold">Bold</p>
-                            <p class="body-font--bold-italic">Bold Italic</p>
+                            <p class="font-bold mb-4">Bold</p>
+                            <p class="font-bold italic">Bold Italic</p>
                         </li>
                         <li>
-                            <p>Regular</p>
-                            <p class="body-font--italic">Italic</p>
+                            <p class="mb-4">Regular</p>
+                            <p class="italic">Italic</p>
                         </li>
                         <li>
-                            <p class="body-font--light">Light</p>
-                            <p class="body-font--light-italic">Light Italic</p>
+                            <p class="font-light mb-4">Light</p>
+                            <p class="font-light italic">Light Italic</p>
                         </li>
                     </ul>
                 </div>
@@ -69,42 +73,45 @@
                     </ul>
                 </div>
             </div>
-        
-        
+        </section>
+        <section class="styleguide__section">
+            <header>
+                <h2>Colors</h2>
+            </header>
             <h2 class="styleguide__title">Brand</h2>
             <div class="styleguide__colors">
                 <div class="styleguide__color">
-                    <div class="styleguide__color__box bg-color--brand-primary">
+                    <div class="styleguide__color__box bg-primary">
                         <span class="styleguide__color__hex">#323550</span>
                     </div>
                     <p class="styleguide__color__variable-name">primary</p>
                 </div>
                 <div class="styleguide__color">
-                    <div class="styleguide__color__box bg-color--brand-secondary">
-                        <span class="styleguide__color__hex">#191B28</span>
-                    </div>
-                    <p class="styleguide__color__variable-name">secondary</p>
-                </div>
-                <div class="styleguide__color">
-                    <div class="styleguide__color__box bg-color--brand-secondary">
-                        <span class="styleguide__color__hex">#191B28</span>
-                    </div>
-                    <p class="styleguide__color__variable-name">secondary</p>
-                </div>
-                <div class="styleguide__color">
-                    <div class="styleguide__color__box bg-color--brand-tertiary">
-                        <span class="styleguide__color__hex">#DAB279</span>
-                    </div>
-                    <p class="styleguide__color__variable-name">tertiary</p>
-                </div>
-                <div class="styleguide__color">
-                    <div class="styleguide__color__box bg-color--brand-primary-alt">
+                    <div class="styleguide__color__box bg-primary-alt">
                         <span class="styleguide__color__hex">#22253A</span>
                     </div>
                     <p class="styleguide__color__variable-name">primary alt</p>
                 </div>
                 <div class="styleguide__color">
-                    <div class="styleguide__color__box bg-color--brand-tertiary-alt">
+                    <div class="styleguide__color__box bg-primary-light">
+                        <span class="styleguide__color__hex">#4A4E69</span>
+                    </div>
+                    <p class="styleguide__color__variable-name">primary light</p>
+                </div>
+                <div class="styleguide__color">
+                    <div class="styleguide__color__box bg-secondary">
+                        <span class="styleguide__color__hex">#191B28</span>
+                    </div>
+                    <p class="styleguide__color__variable-name">secondary</p>
+                </div>
+                <div class="styleguide__color">
+                    <div class="styleguide__color__box bg-tertiary">
+                        <span class="styleguide__color__hex">#DAB279</span>
+                    </div>
+                    <p class="styleguide__color__variable-name">tertiary</p>
+                </div>
+                <div class="styleguide__color">
+                    <div class="styleguide__color__box bg-tertiary-alt">
                         <span class="styleguide__color__hex">#967751</span>
                     </div>
                     <p class="styleguide__color__variable-name">tertiary alt</p>
@@ -113,20 +120,29 @@
             <h2 class="styleguide__title">Utility</h2>
             <div class="styleguide__colors">
                 <div class="styleguide__color">
-                    <div class="styleguide__color__box bg-color--black-pearl">
+                    <div class="styleguide__color__box bg-quaternary">
                         <span class="styleguide__color__hex">#02040C</span>
                     </div>
-                    <p class="styleguide__color__variable-name">black pearl</p>
+                    <p class="styleguide__color__variable-name">quaternary</p>
                 </div>
                 <div class="styleguide__color">
-                    <div class="styleguide__color__box bg-color--white">
+                    <div class="styleguide__color__box bg-medium">
+                        <span class="styleguide__color__hex">#7C8A9A</span>
+                    </div>
+                    <p class="styleguide__color__variable-name">medium</p>
+                </div>
+                <div class="styleguide__color">
+                    <div class="styleguide__color__box bg-light">
                         <span class="styleguide__color__hex">#FFFFFF</span>
                     </div>
                     <p class="styleguide__color__variable-name">white</p>
                 </div>
             </div>
-        
-        
+        </section>
+        <section class="styleguide__section">
+            <header>
+                <h2>Buttons</h2>
+            </header>
             <div class="md:grid grid-cols-3 gap-4">
                 <div>
                     <div class="styleguide__btn-wrapper">
@@ -200,132 +216,12 @@
                     </div>
                 </div>
             </div>
-
-
-            <h2 class="styleguide__title">Tabs</h2>
-            <div class="tabs">
-                <div class="tabs__header">
-                    <div class="tabs__control tabs__control--active">Typography</div>
-                    <div class="tabs__control">Colors</div>
-                    <div class="tabs__control">Buttons</div>
-                    <div class="tabs__control">Images</div>
-                </div>
-            </div>
-        
-        
-            <div class="md:grid grid-cols-3 gap-4">
-                <div>
-                    <div class="styleguide__btn-wrapper">
-                        <h2 class="styleguide__title">Icons</h2>
-                        {% comment %} <img src={iconBars} class="styleguide__icon" alt="bars" />
-                        <img src={iconCross} class="styleguide__icon" alt="cross" />
-                        <img src={iconPlus} class="styleguide__icon" alt="plus" />
-                        <img src={iconResume} class="styleguide__icon" alt="resume" />
-                        <img src={iconResumeGold} class="styleguide__icon" alt="resume gold" /> {% endcomment %}
-                    </div>
-                </div>
-                <div class="col-span-2">
-                    <div class="styleguide__btn-wrapper">
-                        <h2 class="styleguide__title">Logos platforms</h2>
-                        {% comment %} <img src={logoCodepen} class="styleguide__logo logo-codepen" alt="codepen" />
-                        <img src={logoGithub} class="styleguide__logo logo-github" alt="github" />
-                        <img src={logoDribbble} class="styleguide__logo logo-dribbble" alt="dribbble" />
-                        <img src={logoCodepenBlue} class="styleguide__logo logo-codepen" alt="codepen" />
-                        <img src={logoGithubBlue} class="styleguide__logo logo-github" alt="github" />
-                        <img src={logoDribbbleBlue} class="styleguide__logo logo-dribbble" alt="dribbble" /> {% endcomment %}
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="styleguide__btn-wrapper">
-                        <h2 class="styleguide__title">Logos technology</h2>
-                        <div class="styleguide__btn-wrapper styleguide__logos-tech">
-                            {% comment %} <img src={logoPhotoshop} class="styleguide__logo-tech logo-photoshop" alt="photoshop" />
-                            <img src={logoIllustrator} class="styleguide__logo-tech logo-illustrator" alt="illustrator" />
-                            <img src={logoXd} class="styleguide__logo-tech logo-xd" alt="xd" />
-                            <img src={logoDreamweaver} class="styleguide__logo-tech logo-dreamweaver" alt="dreamweaver" />
-                            <img src={logoFigma} class="styleguide__logo-tech logo-figma" alt="figma" />
-                            <img src={logoInvision} class="styleguide__logo-tech logo-invision" alt="invision" />
-                            <img src={logoZeplin} class="styleguide__logo-tech logo-zeplin" alt="zeplin" />
-                            <img src={logoHtml5} class="styleguide__logo-tech logo-html5" alt="html5" />
-                            <img src={logoLess} class="styleguide__logo-tech logo-less" alt="less" />
-                            <img src={logoVanillajs} class="styleguide__logo-tech logo-vanillajs" alt="vanilla js" />
-                            <img src={logoCss3} class="styleguide__logo-tech logo-css3" alt="css3" />
-                            <img src={logoSass} class="styleguide__logo-tech logo-sass" alt="sass" />
-                            <img src={logoLiquid} class="styleguide__logo-tech logo-liquid" alt="liquid" />
-                            <img src={logoDnn} class="styleguide__logo-tech logo-dnn" alt="dnn" />
-                            <img src={logoWordpress} class="styleguide__logo-tech logo-wordpress" alt="wordpress" />
-                            <img src={logoGit} class="styleguide__logo-tech logo-git" alt="git" />
-                            <img src={logoSitecore} class="styleguide__logo-tech logo-sitecore" alt="sitecore" />
-                            <img src={logoJquery} class="styleguide__logo-tech logo-jquery" alt="jquery" />
-                            <img src={logoSourcetree} class="styleguide__logo-tech logo-sourcetree" alt="sourcetree" />
-                            <img src={logoAem} class="styleguide__logo-tech logo-aem" alt="aem" />
-                            <img src={logoVisualstudio} class="styleguide__logo-tech logo-visualstudio" alt="visualstudio" />
-                            <img src={logoVscode} class="styleguide__logo-tech logo-vscode" alt="vscode" />
-                            <img src={logoBootstrap} class="styleguide__logo-tech logo-bootstrap" alt="bootstrap" />
-                            <img src={logoReact} class="styleguide__logo-tech logo-react" alt="react" />
-                            <img src={logoAngular} class="styleguide__logo-tech logo-angular" alt="angular" />
-                            <img src={logoAmp} class="styleguide__logo-tech logo-amp" alt="amp" />
-                            <img src={logoBem} class="styleguide__logo-tech logo-bem" alt="bem" />
-                            <img src={logoJenkins} class="styleguide__logo-tech logo-jenkins" alt="jenkins" />
-                            <img src={logoGulp} class="styleguide__logo-tech logo-gulp" alt="gulp" /> {% endcomment %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="styleguide__btn-wrapper">
-                        <h2 class="styleguide__title">Hero images</h2>
-                        <div class="styleguide__heros">
-                            {% comment %} <img src={heroDaniel} class="styleguide__hero hero-daniel" alt="daniel" />
-                            <img src={heroWebsites} class="styleguide__hero hero-websites" alt="websites" />
-                            <img src={heroDesigns} class="styleguide__hero hero-designs" alt="designs" /> {% endcomment %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="styleguide__btn-wrapper">
-                        <h2 class="styleguide__title">Section Header Images</h2>
-                        <div class="styleguide__shis">
-                            {% comment %} <img src={shiDesktop} class="styleguide__shi shi-desktop" alt="code and designs on multiple screens" />
-                            <img src={shiMobile} class="styleguide__shi shi-mobile" alt="code and designs on multiple screens" /> {% endcomment %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="styleguide__btn-wrapper">
-                        <h2 class="styleguide__title">Backgrounds vectors</h2>
-                        {% comment %} <img src={bgClosetag} class="styleguide__bg" alt="closetag" />
-                        <img src={bgSlash} class="styleguide__bg" alt="slash" /> {% endcomment %}
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="styleguide__btn-wrapper">
-                        <h2 class="styleguide__title">Backgrounds images</h2>
-                        {% comment %} <img src={bgCode} class="styleguide__bg-img" alt="code" />
-                        <img src={bgDesigns} class="styleguide__bg-img" alt="designs" />
-                        <img src={bgTeam} class="styleguide__bg-img" alt="team" /> {% endcomment %}
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="styleguide__btn-wrapper">
-                        <h2 class="styleguide__title">Section images</h2>
-                        {% comment %} <img src={sectionHpp} class="styleguide__section section-hpp" alt="hpp" />
-                        <img src={sectionWalpeco} class="styleguide__section section-walpeco" alt="walpeco" />
-                        <img src={sectionNoahsark} class="styleguide__section section-noahsark" alt="noahsark" />
-                        <img src={sectionNrt} class="styleguide__section section-nrt" alt="nrt" /> {% endcomment %}
-                    </div>
-                </div>
-            </div>
+        </section>
+        <section class="styleguide__section">
+            <header>
+                <h2>Images</h2>
+            </header>
+            <h2 class="styleguide__title">Icons</h2>
+        </section>
     </div>
 </div>

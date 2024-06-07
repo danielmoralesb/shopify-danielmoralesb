@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  plugins: [require("flowbite/plugin")],
   content: [
     "./layout/*.liquid",
     "./sections/*.liquid",
     "./snippets/*.liquid",
     "./templates/*.liquid",
     "./templates/customers/*.liquid",
+    "./node_modules/flowbite/src/**/*.js",
   ],
   theme: {
     screens: {
@@ -44,6 +46,7 @@ module.exports = {
       xs: "0.6rem",
       sm: "0.75rem",
       base: "1rem",
+      "base-lg": "1.25rem",
       lg: "1.5rem",
       xl: "1.75rem",
       "2xl": "2rem",
@@ -51,6 +54,12 @@ module.exports = {
       "4xl": "4rem",
       "5xl": "5rem",
       "6xl": "6rem",
+    },
+    extend: {
+      backgroundImage: {
+        "icon-bars": "url('/assets/icon-bars.svg')",
+        "icon-cross": "url('/assets/icon-cross.svg')",
+      },
     },
   },
 };
