@@ -1,32 +1,24 @@
-<header class="header">
-    <div class="md:flex md:items-center justify-between md:container md:mx-auto">
-    <div class="flex items-center justify-between h-20 z-50 px-7 md:w-auto md:px-0">
-      <div class="w-24">
-        <a href="/" class="block h-9">
-          {% render 'logo-dm-blue' %}
-          {% comment %}
-            <img src={logo} alt="Daniel Morales B Logo" class="header__logo-image"/>
-            <img src={logoGold} alt="Daniel Morales B Logo" class="header__logo-image-gold" />
-          {% endcomment %}
-          <span class="sr-only">Home link</span>
-        </a>
-      </div>
-      <button class="md:hidden" data-collapse-toggle="navbar-hamburger">
-        {% render 'icon-bars' %}
-        <span class="sr-only">Toggle Nav</span>
-      </button>
-    </div>
-    <nav class="header__nav-wrapper md:block" id="navbar-hamburger">
-      <ul class="md:flex gap-4">
-        {% for link in linklists.main-menu.links %}
-        <li class="header__item font">
-          <a href="{{ link.url }}" class="text-primary-light text-base-lg"><span>{{ link.title }}</span></a>
-        </li>
-        {% endfor %}
-      </ul>
-    </nav>
-
-    {% comment %} max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 {% endcomment %}
+<header class="main-header">
+    <div class="md:flex md:items-center justify-between md:container md:mx-auto md:h-28">
+        <div class="flex items-center justify-between h-20 z-50 px-7 md:w-auto md:px-0">
+            <a href="/" class="main-header__logo">
+                {{ 'logo-dm-blue.svg' | asset_url | img_tag: 'Daniel Morales B Logo', 'main-header__logo-blue' }}
+                {{ 'logo-dm-gold.svg' | asset_url | img_tag: 'Daniel Morales B Logo', 'main-header__logo-gold' }}
+            <span class="sr-only">Home link</span>
+            </a>
+            <button class="main-header__toggle" data-collapse-toggle="navbar-hamburger">
+                <span class="sr-only">Toggle Nav</span>
+            </button>
+        </div>
+        <nav class="bg-quaternary border-solid border-b-2 border-primary pb-4 hidden shadow-lg shadow-black absolute w-full md:block md:border-none md:pb-0 md:shadow-none md:static md:w-auto" id="navbar-hamburger">
+        <ul class="flex flex-col gap-4 md:flex-row md:items-start">
+            {% for link in linklists.main-menu.links %}
+            <li>
+            <a href="{{ link.url }}" class="text-primary-light text-base-lg hover:text-tertiary block text-center md:text-left"><span>{{ link.title }}</span></a>
+            </li>
+            {% endfor %}
+        </ul>
+        </nav>
     <nav class="hidden">
         <a href="/" class="">
             {% render 'logo-dm-blue' %}
@@ -50,3 +42,8 @@
     </nav>
   </div>
 </header>
+{% schema %}
+{
+    "name": "Navigational Header",
+}
+{% endschema %}
