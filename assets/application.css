@@ -1164,6 +1164,10 @@ h6 {
   margin-top: 0px;
 }
 
+.mt-8{
+  margin-top: 2rem;
+}
+
 .block{
   display: block;
 }
@@ -1567,6 +1571,10 @@ h6 {
     margin-top: 1.5rem;
   }
 
+  .md\:mt-0{
+    margin-top: 0px;
+  }
+
   .md\:flex{
     display: flex;
   }
@@ -1589,6 +1597,10 @@ h6 {
 
   .md\:h-24{
     height: 6rem;
+  }
+
+  .md\:h-10{
+    height: 2.5rem;
   }
 
   .md\:w-auto{
