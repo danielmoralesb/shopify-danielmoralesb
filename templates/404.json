@@ -1,6 +1,6 @@
 {
   "name": "Template 404",
-  "Layout": "custom_theme",
+  "layout": "custom_theme",
   "wrapper": "div#404_template.custom-class[role='main']",
   "sections": {
     "template-404": {
