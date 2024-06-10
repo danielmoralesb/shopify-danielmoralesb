@@ -1,44 +1,59 @@
+{% assign main_menu_linklist = linklists[section.settings.main-menu].links %}
+{{ shop.customer_accounts_enabled}}
+
 <header class="main-header">
-    <div class="md:flex md:items-center justify-between md:container md:mx-auto md:h-28">
-        <div class="flex items-center justify-between h-20 z-50 px-7 md:w-auto md:px-0">
+    <div class="md:flex md:items-center gap-x-4 md:container md:mx-auto md:h-24">
+        <div class="flex items-center gap-x-3 h-20 z-50 px-4 md:h-auto md:w-auto md:px-0 md:mt-5">
             <a href="/" class="main-header__logo">
                 {{ 'logo-dm-blue.svg' | asset_url | img_tag: 'Daniel Morales B Logo', 'main-header__logo-blue' }}
                 {{ 'logo-dm-gold.svg' | asset_url | img_tag: 'Daniel Morales B Logo', 'main-header__logo-gold' }}
             <span class="sr-only">Home link</span>
             </a>
+            <span class="text-primary-light font-bold italic lg:text-lg">{{ section.settings.store_title }}</span>
             <button class="main-header__toggle" data-collapse-toggle="navbar-hamburger">
                 <span class="sr-only">Toggle Nav</span>
             </button>
         </div>
-        <nav class="bg-quaternary border-solid border-b-2 border-primary pb-4 hidden shadow-lg shadow-black absolute w-full md:block md:border-none md:pb-0 md:shadow-none md:static md:w-auto" id="navbar-hamburger">
-        <ul class="flex flex-col gap-4 md:flex-row md:items-start">
-            {% for link in linklists.main-menu.links %}
-            <li>
-            <a href="{{ link.url }}" class="text-primary-light text-base-lg hover:text-tertiary block text-center md:text-left"><span>{{ link.title }}</span></a>
-            </li>
-            {% endfor %}
-        </ul>
-        </nav>
-    <nav class="hidden">
-        <a href="/" class="">
-            {% render 'logo-dm-blue' %}
-            <span class="sr-only">Home Link</span>
-        </a>
-        <button data-collapse-toggle="navbar-hamburger" type="button" class="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-hamburger" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-            </svg>
-        </button>
-        <div class="hidden w-full" id="navbar-hamburger">
-            <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-                {% for link in linklists.main-menu.links %}
-                <li>
-                    <a href="{{ link.url }}" class="block py-2 px-3 text-white bg-blue-700 rounded dark:bg-blue-600" aria-current="page">{{ link.title }}</a>
-                </li>
-                {%  endfor %}
+        <nav class="bg-quaternary border-solid border-b-2 border-primary pb-4 hidden shadow-lg shadow-black absolute w-full md:flex md:gap-x-10 md:border-none md:pb-0 md:shadow-none md:static md:w-auto md:ml-auto" id="navbar-hamburger">
+            <ul class="flex flex-col gap-4 md:flex-row md:items-baseline mb-8 md:mb-0">
+                {% for link in main_menu_linklist %}
+                    <li class="md:h-full md:flex md:flex-col md:justify-end">
+                        <a href="{{ link.url }}" class="text-primary-light hover:text-tertiary block text-center md:text-left"><span>{{ link.title }}</span></a>
+                    </li>
+                {% endfor %}
             </ul>
-        </div>
-    </nav>
+            <ul class="flex flex-col gap-4 md:flex-row md:items-baseline">
+                <li class="flex flex-col gap-4 md:flex-row md:items-start">
+                    <a href="{{ routes.account_login_url }}" class="flex justify-center text-primary-light hover:text-tertiary text-center md:flex-col md:items-center">
+                        {% render 'icon-lock-closed' %}
+                        <span>Login</span>
+                    </a>
+                </li>
+                <li class="flex flex-col gap-4 md:flex-row md:items-start">
+                    <a href="{{ routes.account_register_url }}" class="flex justify-center text-primary-light hover:text-tertiary text-center md:flex-col md:items-center">
+                        {%render 'icon-pencil-square' %} 
+                        <span>Register</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
   </div>
 </header>
+{% schema %}
+{
+    "name": "Header",
+    "settings": [
+        {
+            "type": "text",
+            "id": "store_title",
+            "label": "Title",
+            "default": "Your online store"
+        },
+        {
+            "type": "link_list",
+            "id": "main-menu",
+            "label": "Main menu"
+        }
+    ]
+}
+{% endschema %}
