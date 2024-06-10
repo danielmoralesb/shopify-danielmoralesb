@@ -1,6 +1,25 @@
 {
-  "current": "Default",
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "store_title": "Your online store",
+          "main-menu": "summer-menu"
+        }
+      },
+      "styleguide": {
+        "type": "styleguide",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
   "presets": {
-    "Default": { }
+    "Default": {
+    }
   }
 }
